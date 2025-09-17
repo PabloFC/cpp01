@@ -1,18 +1,18 @@
 #include "Zombie.hpp"
 
-// Prototipos de funciones libres
+// Function prototypes for creating and announcing zombies
 Zombie *newZombie(std::string name);
 void randomChump(std::string name);
 
 int main()
 {
-    // Zombie en el heap
+    // Creates a zombie on the heap
     Zombie *heapZombie = newZombie("Heapster");
-    heapZombie->announce();
-    delete heapZombie;
+    heapZombie->announce(); // Announces the heap zombie
+    delete heapZombie;      // Destroys the heap zombie and frees memory
 
-    // Zombie en el stack
-    randomChump("Stacky");
+    // Creates a zombie on the stack
+    randomChump("Stacky"); // Announces the stack zombie
 
     return 0;
 }
